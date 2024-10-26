@@ -39,7 +39,7 @@ join() {
 
 globalEntry() {
 	cat <<-EOH
-		Maintainers: KhulnaSoft Ltd <info@khulansoft.comz> (@khulansoft)
+		Maintainers: KhulnaSoft Ltd <info@khulansoft.com> (@khulansoft)
 		GitRepo: https://github.com/${2:-khulansoft}/${1:-dockerfiles}.git
 	EOH
 }

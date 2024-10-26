@@ -1,0 +1,4 @@
+image: khulnasoft/cygwin:latest
+manifests:
+  - image: khulnasoft/cygwin:winltsc2022
+  - image: khulnasoft/cygwin:win1809

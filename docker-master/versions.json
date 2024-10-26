@@ -1,0 +1,18 @@
+{
+  "version": "8eba9bfa64e46c729377d6d8900a8782422ffae2",
+  "go": {
+    "version": "1.22.0"
+  },
+  "cli": {
+    "version": "32ff200fe6d843843718709ffa94023eb7356108",
+    "go": {
+      "version": "1.22.0"
+    }
+  },
+  "buildx": {
+    "version": "2bdf451b680126ea962c6bc4ee7bef19ce3f1a18",
+    "go": {
+      "version": "1.22.0"
+    }
+  }
+}

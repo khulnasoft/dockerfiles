@@ -1,0 +1,40 @@
+diff --git a/src/main.rs b/src/main.rs
+index ca36055..cb34eb1 100644
+--- a/src/main.rs
++++ b/src/main.rs
+@@ -766,7 +766,7 @@ struct Opt {
+     xattrmap: Option<XattrMap>,
+ 
+     /// Sandbox mechanism to isolate the daemon process (namespace, chroot, none)
+-    #[arg(long, default_value = "namespace")]
++    #[arg(long, default_value = "none")]
+     sandbox: SandboxMode,
+ 
+     /// Action to take when seccomp finds a not allowed syscall (none, kill, log, trap)
+@@ -1175,7 +1175,7 @@ fn drop_capabilities(inode_file_handles: InodeFileHandlesMode, modcaps: Option<S
+     }
+     if let Err(e) = capng::apply(capng::Set::BOTH) {
+         error!("can't apply the child capabilities: {}", e);
+-        process::exit(1);
++        //process::exit(1);
+     }
+ }
+ 
+diff --git a/src/sandbox.rs b/src/sandbox.rs
+index e100383..96a604a 100644
+--- a/src/sandbox.rs
++++ b/src/sandbox.rs
+@@ -596,9 +596,10 @@ impl Sandbox {
+         } else if ngroups != 0 {
+             let ret = unsafe { libc::setgroups(0, std::ptr::null()) };
+             if ret != 0 {
+-                return Err(Error::DropSupplementalGroups(
+-                    std::io::Error::last_os_error(),
+-                ));
++                error!("can't drop supplemental groups: {}", std::io::Error::last_os_error());
++                //return Err(Error::DropSupplementalGroups(
++                //    std::io::Error::last_os_error(),
++                //));
+             }
+         }
+ 
