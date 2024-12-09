@@ -11,7 +11,7 @@ source "$dir/../.libs/git.sh"
 debian='bookworm'
 json="$(jq -nc --arg debian "$debian" '{ debian: { version: $debian } }')"
 
-uri='https://apt.khulnasoft.com/moby'
+uri='https://apt.tianon.xyz/moby'
 component='main'
 
 for suite in \
@@ -42,7 +42,7 @@ for suite in \
 	done
 done
 
-dind="$(github-file-commit 'moby/moby' 'HEAD' 'hack/dind')"
+dind="$(github-file-commit 'docker/docker' 'HEAD' 'hack/dind')"
 
 jq <<<"$json" --argjson dind "$dind" '
 	def upstream_version:

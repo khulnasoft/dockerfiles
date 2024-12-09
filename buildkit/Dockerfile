@@ -4,14 +4,13 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM --platform=$BUILDPLATFORM golang:1.21 AS build
+FROM --platform=$BUILDPLATFORM golang:1.22 AS build
 
 # https://github.com/moby/buildkit/releases
-ENV BUILDKIT_VERSION 0.16.0
+ENV BUILDKIT_VERSION 0.18.1
 
 COPY \
-	backport-5372-sbom-args.patch \
-	backport-moby-48455-fix-riscv64-seccomp.patch \
+	argsescaped.patch \
 	containerd-arm64-v8.patch \
 	git-no-submodules.patch \
 	mips64le.patch \

@@ -11,7 +11,9 @@ variants=(
 	''
 	'rc'
 
-	#'1.7' # TODO add this once 2.0 is stable
+	# https://containerd.io/releases/#support-horizon
+	# https://endoflife.date/containerd
+	'1.7'
 	'1.6'
 
 	# TODO add this when I figure out a clean way to do something more akin to a "weekly snapshot" or something so it doesn't have an update every single day (see also "buildkit")
@@ -138,7 +140,7 @@ runc="$(
 	git-tags 'https://github.com/opencontainers/runc.git'
 )"
 
-dind="$(github-file-commit 'moby/moby' 'HEAD' 'hack/dind')"
+dind="$(github-file-commit 'docker/docker' 'HEAD' 'hack/dind')"
 
 jq <<<"$json" --argjson runc "$runc" --argjson dind "$dind" '
 	.runc = $runc

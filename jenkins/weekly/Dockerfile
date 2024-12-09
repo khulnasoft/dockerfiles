@@ -47,7 +47,7 @@ RUN set -eux; \
 
 RUN echo 'deb [ signed-by=/etc/apt/keyrings/jenkins.gpg.asc ] https://pkg.jenkins.io/debian binary/' > /etc/apt/sources.list.d/jenkins.list
 
-ENV JENKINS_VERSION 2.482
+ENV JENKINS_VERSION 2.488
 
 RUN set -eux; \
 	apt-get update; \
@@ -64,4 +64,4 @@ VOLUME $JENKINS_HOME
 EXPOSE 8080
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["java", "-jar", "/usr/share/jenkins/jenkins.war"]
+CMD ["jenkins"]

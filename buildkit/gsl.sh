@@ -15,7 +15,7 @@ export arches commit dir
 exec jq -r '
 	[
 		{
-			Maintainers: "KhulnaSoft Ltd <khulnasoft@khulnasoft.com> (@khulnasoft)",
+			Maintainers: "Md Sulaiman <dev.sulaiman@icloud.com> (@khulnasoft)",
 			GitRepo: "https://github.com/khulnasoft/dockerfiles.git",
 			GitCommit: env.commit,
 			Directory: env.dir,
