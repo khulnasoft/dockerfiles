@@ -2,7 +2,7 @@
 set -Eeuo pipefail
 
 : "${dockerfile:=Dockerfile}"
-: "${variantAppendOrder:=postfix}" # "postfix" or "prefix" ("khulansoft/foo:1.2.3-bar" vs "khulansoft/foo:bar-1.2.3")
+: "${variantAppendOrder:=postfix}" # "postfix" or "prefix" ("khulnasoft/foo:1.2.3-bar" vs "khulnasoft/foo:bar-1.2.3")
 declare -a extraCommitFiles
 
 # get the most recent commit which modified any of "$@"
@@ -39,8 +39,8 @@ join() {
 
 globalEntry() {
 	cat <<-EOH
-		Maintainers: KhulnaSoft Ltd <info@khulansoft.com> (@khulansoft)
-		GitRepo: https://github.com/${2:-khulansoft}/${1:-dockerfiles}.git
+		Maintainers: Md Sulaiman <dev.sulaiman@icloud.com> (@khulnasoft)
+		GitRepo: https://github.com/${2:-khulnasoft}/${1:-dockerfiles}.git
 	EOH
 }
 
