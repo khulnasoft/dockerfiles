@@ -14,7 +14,7 @@ for gsl in */gsl.sh; do
 	case "$img" in
 		'khulnasoft/infosiftr-moby')
 			# remove per-architecture tags for now (temporary workaround for https://github.com/docker-library/bashbrew/pull/81)
-			newStrategy="$(jq -c 'del(.matrix.include[] | select(.meta.entries[].tags | contains(["khulnasoft/infosiftr-moby:latest"]) | not))' <<<"$newStrategy")"
+			newStrategy="$(jq -c 'del(.matrix.include[] | select(.meta.entries[].tags | contains(["tianon/infosiftr-moby:latest"]) | not))' <<<"$newStrategy")"
 			;;
 
 		'khulnasoft/cygwin')
