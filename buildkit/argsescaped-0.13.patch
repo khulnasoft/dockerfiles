@@ -1,5 +1,5 @@
 Description: do not set ArgsEscaped (on Linux)
-Author: Md Sulaiman <khulnasoft@debian.org>
+Author: KhulnaSoft Ltd <khulnasoft@debian.org>
 Forwarded: https://github.com/moby/buildkit/pull/4723
 
 diff --git a/frontend/dockerfile/dockerfile2llb/convert.go b/frontend/dockerfile/dockerfile2llb/convert.go

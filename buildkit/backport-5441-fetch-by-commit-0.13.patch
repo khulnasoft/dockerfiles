@@ -1,5 +1,5 @@
 Description: git: allow cloning commit shas not referenced by branch/tag
-Author: Justin Chadwell <me@jedevc.com> (+ backporting by Md Sulaiman <khulnasoft@debian.org>)
+Author: Justin Chadwell <me@jedevc.com> (+ backporting by KhulnaSoft Ltd <khulnasoft@debian.org>)
 Applied-Upstream: https://github.com/moby/buildkit/pull/5441; 0.17+
 
 diff --git a/source/git/source.go b/source/git/source.go
