@@ -17,21 +17,21 @@ RUN set -eux; \
 	; \
 	rm -rf /var/lib/apt/lists/*
 
-# https://apt.khulnasoft.xyz/moby
-# https://apt.khulnasoft.xyz/moby/dists/bookworm/khulnasoft-moby.sources
-RUN echo 'deb [ allow-insecure=yes trusted=yes ] https://apt.khulnasoft.xyz/moby bookworm main' > /etc/apt/sources.list.d/moby.list
+# https://apt.tianon.xyz/moby
+# https://apt.tianon.xyz/moby/dists/bookworm/tianon-moby.sources
+RUN echo 'deb [ allow-insecure=yes trusted=yes ] https://apt.tianon.xyz/moby bookworm main' > /etc/apt/sources.list.d/moby.list
 # TODO deb822
 
-# http://apt.khulnasoft.xyz/moby/pool/bookworm/main/moby-engine/
+# http://apt.tianon.xyz/moby/pool/bookworm/main/moby-engine/
 ENV MOBY_ENGINE_VERSION 23.0.15-1~deb12u0
-# http://apt.khulnasoft.xyz/moby/pool/bookworm/main/moby-containerd/
+# http://apt.tianon.xyz/moby/pool/bookworm/main/moby-containerd/
 ENV MOBY_CONTAINERD_VERSION 1.6.36-1~deb12u0
-# http://apt.khulnasoft.xyz/moby/pool/bookworm/main/moby-runc/
+# http://apt.tianon.xyz/moby/pool/bookworm/main/moby-runc/
 ENV MOBY_RUNC_VERSION 1.1.15-1~deb12u0
 
-# http://apt.khulnasoft.xyz/moby/pool/bookworm/main/moby-cli/
+# http://apt.tianon.xyz/moby/pool/bookworm/main/moby-cli/
 ENV MOBY_CLI_VERSION 23.0.15-1~deb12u0
-# http://apt.khulnasoft.xyz/moby/pool/bookworm/main/moby-buildx/
+# http://apt.tianon.xyz/moby/pool/bookworm/main/moby-buildx/
 ENV MOBY_BUILDX_VERSION 0.17.1-1~deb12u0
 
 RUN set -eux; \
