@@ -1,37 +1,37 @@
 {
-  "commit": "207ad711eabd375a01713109a8a197d197ff6542",
-  "ref": "refs/tags/v2.0.0^{}",
-  "tag": "v2.0.0",
-  "version": "2.0.0",
+  "commit": "c507a0257ea6462fbd6f5ba4f5c74facb04021f4",
+  "ref": "refs/tags/v2.0.2^{}",
+  "tag": "v2.0.2",
+  "version": "2.0.2",
   "arches": {
     "amd64": {
-      "url": "https://github.com/containerd/containerd/releases/download/v2.0.0/containerd-2.0.0-linux-amd64.tar.gz",
-      "sha256": "6f8da716941f7e89315cefaa6e5a8f1ff10b323ff46611313c455df7ab1ebee1",
+      "url": "https://github.com/containerd/containerd/releases/download/v2.0.2/containerd-2.0.2-linux-amd64.tar.gz",
+      "sha256": "9bd5b6a1bdf505d520d9a329c520258ed0a17faa9fe3db12712ee858ad59aae3",
       "dpkgArch": "amd64"
     },
     "arm64v8": {
-      "url": "https://github.com/containerd/containerd/releases/download/v2.0.0/containerd-2.0.0-linux-arm64.tar.gz",
-      "sha256": "2a00b1553f38aa9e716d61316b661961c2fbfbb7aad7bd73b377be5725ecc0f1",
+      "url": "https://github.com/containerd/containerd/releases/download/v2.0.2/containerd-2.0.2-linux-arm64.tar.gz",
+      "sha256": "14a2a9f7f75f73e5bcfb8b183d0b84830c54b98ef8c5f6ed70e51f1a230c673e",
       "dpkgArch": "arm64"
     },
     "ppc64le": {
-      "url": "https://github.com/containerd/containerd/releases/download/v2.0.0/containerd-2.0.0-linux-ppc64le.tar.gz",
-      "sha256": "2e7f4b15ac85c22c1ced102bbb424124078248f0af3183425ff335a998079809",
+      "url": "https://github.com/containerd/containerd/releases/download/v2.0.2/containerd-2.0.2-linux-ppc64le.tar.gz",
+      "sha256": "1b19d31bb8a7f9d26d9b50675e78f397d0b01fa635c33cca456f91c412fa6df1",
       "dpkgArch": "ppc64el"
     },
     "riscv64": {
-      "url": "https://github.com/containerd/containerd/releases/download/v2.0.0/containerd-2.0.0-linux-riscv64.tar.gz",
-      "sha256": "d54d8f44151706fded02c2c657d30cb8360bfa7d66d715ea522452367fb2c376",
+      "url": "https://github.com/containerd/containerd/releases/download/v2.0.2/containerd-2.0.2-linux-riscv64.tar.gz",
+      "sha256": "97a50754f9e1375b6129f7d625733b7d5e0bc30a51aab99fdaee660eb9b700ad",
       "dpkgArch": "riscv64"
     },
     "s390x": {
-      "url": "https://github.com/containerd/containerd/releases/download/v2.0.0/containerd-2.0.0-linux-s390x.tar.gz",
-      "sha256": "06015a6a238b97f2ce4cc2f6a9d8f711af2784fe197660b2e7eef4ea3b5328de",
+      "url": "https://github.com/containerd/containerd/releases/download/v2.0.2/containerd-2.0.2-linux-s390x.tar.gz",
+      "sha256": "4e578e9c0c3f4718df0c76deaa2037d2c5d1160d0d0138fa9df4b1cc28f51fe7",
       "dpkgArch": "s390x"
     },
     "windows-amd64": {
-      "url": "https://github.com/containerd/containerd/releases/download/v2.0.0/containerd-2.0.0-windows-amd64.tar.gz",
-      "sha256": "512ecb1b3162247136e6a6c21e90290c849f684fcf1215eda5740cb7868788e8",
+      "url": "https://github.com/containerd/containerd/releases/download/v2.0.2/containerd-2.0.2-windows-amd64.tar.gz",
+      "sha256": "c8f6ee6d13368cbabcf13e742161df7bc2675a00850d65d29d4e2384999f1672",
       "dpkgArch": null
     }
   },
@@ -80,39 +80,39 @@
     }
   },
   "1.7": {
-    "commit": "88bf19b2105c8b17560993bee28a01ddc2f97182",
-    "ref": "refs/tags/v1.7.24^{}",
-    "tag": "v1.7.24",
-    "version": "1.7.24",
+    "commit": "bcc810d6b9066471b0b6fa75f557a15a1cbf31bb",
+    "ref": "refs/tags/v1.7.25^{}",
+    "tag": "v1.7.25",
+    "version": "1.7.25",
     "arches": {
       "amd64": {
-        "url": "https://github.com/containerd/containerd/releases/download/v1.7.24/containerd-1.7.24-linux-amd64.tar.gz",
-        "sha256": "1a94f15139f37633f39e24f08a4071f4533b285df3cbee6478972d26147bcaef",
+        "url": "https://github.com/containerd/containerd/releases/download/v1.7.25/containerd-1.7.25-linux-amd64.tar.gz",
+        "sha256": "02990fa281c0a2c4b073c6d2415d264b682bd693aa7d86c5d8eb4b86d684a18c",
         "dpkgArch": "amd64"
       },
       "arm64v8": {
-        "url": "https://github.com/containerd/containerd/releases/download/v1.7.24/containerd-1.7.24-linux-arm64.tar.gz",
-        "sha256": "420406d2b34ebb422ab3755fbeede59bf3bfcfccf5cfa584b558c93769d99064",
+        "url": "https://github.com/containerd/containerd/releases/download/v1.7.25/containerd-1.7.25-linux-arm64.tar.gz",
+        "sha256": "e9201d478e4c931496344b779eb6cb40ce5084ec08c8fff159a02cabb0c6b9bf",
         "dpkgArch": "arm64"
       },
       "ppc64le": {
-        "url": "https://github.com/containerd/containerd/releases/download/v1.7.24/containerd-1.7.24-linux-ppc64le.tar.gz",
-        "sha256": "2ca4d527dac68132a2a6b3971d82ddfd18edc7fa838b7cfcfe6eb11efd017871",
+        "url": "https://github.com/containerd/containerd/releases/download/v1.7.25/containerd-1.7.25-linux-ppc64le.tar.gz",
+        "sha256": "0934176e32eace1c23dcb9edff0e78f872bf8f7152b5e6f622e9ccf1ddce8722",
         "dpkgArch": "ppc64el"
       },
       "riscv64": {
-        "url": "https://github.com/containerd/containerd/releases/download/v1.7.24/containerd-1.7.24-linux-riscv64.tar.gz",
-        "sha256": "e570544ef0339caedc5daf54360d385d84dbc6d0070577ac561f19d51b5d59de",
+        "url": "https://github.com/containerd/containerd/releases/download/v1.7.25/containerd-1.7.25-linux-riscv64.tar.gz",
+        "sha256": "1b07ac5d7256f717d6120cf6ad50bc725e75289352a9595486deeca68c9f1134",
         "dpkgArch": "riscv64"
       },
       "s390x": {
-        "url": "https://github.com/containerd/containerd/releases/download/v1.7.24/containerd-1.7.24-linux-s390x.tar.gz",
-        "sha256": "353ed879ff2e298d97f9d690b96bf9f1ece58b5adf291da32f900b5352bcc690",
+        "url": "https://github.com/containerd/containerd/releases/download/v1.7.25/containerd-1.7.25-linux-s390x.tar.gz",
+        "sha256": "8a1aad7f88a4c1190c17c78de8dc8d4c116de27dc8c158873de2eabdf6e422a5",
         "dpkgArch": "s390x"
       },
       "windows-amd64": {
-        "url": "https://github.com/containerd/containerd/releases/download/v1.7.24/containerd-1.7.24-windows-amd64.tar.gz",
-        "sha256": "3260984ce37c927a8d1de4c25471ebb0533abb5b9e6c4e30e3685df0ecbfb629",
+        "url": "https://github.com/containerd/containerd/releases/download/v1.7.25/containerd-1.7.25-windows-amd64.tar.gz",
+        "sha256": "ec819a29d81b52a1aa8ffd995751639de7102ac08d54a0248d1d1484809e0460",
         "dpkgArch": null
       }
     }
@@ -151,51 +151,51 @@
     }
   },
   "runc": {
-    "commit": "7cb363254b69e10320360b63fb73e0ffb5da7bf2",
-    "ref": "refs/tags/v1.2.2^{}",
-    "tag": "v1.2.2",
-    "version": "1.2.2",
+    "commit": "6c52b3fc541fb26fe8c374d5f58112a0a5dbda66",
+    "ref": "refs/tags/v1.2.4^{}",
+    "tag": "v1.2.4",
+    "version": "1.2.4",
     "arches": {
       "amd64": {
-        "url": "https://github.com/opencontainers/runc/releases/download/v1.2.2/runc.amd64",
-        "sha256": "a34f5ab4fc1df1f456293c3d797a76f2d41cf3cd970bb49fc53ba94bbc8a5cf6",
+        "url": "https://github.com/opencontainers/runc/releases/download/v1.2.4/runc.amd64",
+        "sha256": "e83565aa78ec8f52a4d2b4eb6c4ca262b74c5f6770c1f43670c3029c20175502",
         "dpkgArch": "amd64"
       },
       "i386": {
-        "url": "https://github.com/opencontainers/runc/releases/download/v1.2.2/runc.386",
-        "sha256": "7d05edbb10405f3fa77d8e6b3646cab4ca07a67c21110fcdc05d2e33224bf253",
+        "url": "https://github.com/opencontainers/runc/releases/download/v1.2.4/runc.386",
+        "sha256": "41dda3ff784c611bc86acf16f3472f9663160809bf6be854998231e3e038df63",
         "dpkgArch": "i386"
       },
       "arm64v8": {
-        "url": "https://github.com/opencontainers/runc/releases/download/v1.2.2/runc.arm64",
-        "sha256": "bfd3e6c58bd6060eaa725520c31cbc8f6386ac7606e65bfa7fe9084100aa1789",
+        "url": "https://github.com/opencontainers/runc/releases/download/v1.2.4/runc.arm64",
+        "sha256": "285f6c4c3de1d78d9f536a0299ae931219527b2ebd9ad89df5a1072896b7e82a",
         "dpkgArch": "arm64"
       },
       "arm32v7": {
-        "url": "https://github.com/opencontainers/runc/releases/download/v1.2.2/runc.armhf",
-        "sha256": "78b8eb427e4b55431edc1d73772889f0905b7ae9f1273839fe9478edc1a99949",
+        "url": "https://github.com/opencontainers/runc/releases/download/v1.2.4/runc.armhf",
+        "sha256": "1aba471efcaf76393b308e23ff8013fbd2f60f920a2c7dc84e33b31dccc24ebf",
         "dpkgArch": "armhf"
       },
       "ppc64le": {
-        "url": "https://github.com/opencontainers/runc/releases/download/v1.2.2/runc.ppc64le",
-        "sha256": "9af46fe0bdc654c72593a937806ca034ffbbf4f62f25c1de7a40b5b0f4374de7",
+        "url": "https://github.com/opencontainers/runc/releases/download/v1.2.4/runc.ppc64le",
+        "sha256": "141fa41c1f382483ccf374827f99c7843414fceb95e8ceb710aba8bac984d016",
         "dpkgArch": "ppc64el"
       },
       "riscv64": {
-        "url": "https://github.com/opencontainers/runc/releases/download/v1.2.2/runc.riscv64",
-        "sha256": "cc169ba3fe80981759034c5ebcb20534d90c4d3e8e6825950bc2c192f800bd0b",
+        "url": "https://github.com/opencontainers/runc/releases/download/v1.2.4/runc.riscv64",
+        "sha256": "2b58f0f7d1450cba40e05e4c3ba7251702a785f19bff5bc7ff736004a9ef9424",
         "dpkgArch": "riscv64"
       },
       "s390x": {
-        "url": "https://github.com/opencontainers/runc/releases/download/v1.2.2/runc.s390x",
-        "sha256": "33fe3bab8d12a43f0499fc018abbac2536e61c0c30bc9e962df363549ae58b34",
+        "url": "https://github.com/opencontainers/runc/releases/download/v1.2.4/runc.s390x",
+        "sha256": "cb6f5692687f351325fbf67e9655563c83537918a40dfb5c864894f32f6115c3",
         "dpkgArch": "s390x"
       }
     }
   },
   "dind": {
-    "version": "65cfcc28ab37cb75e1560e4b4738719c07c6618e",
-    "date": "2023-11-27T14:48:51.000+01:00",
-    "unix": 1701092931
+    "version": "c43aa0b6aa7c88343f0951ba9a39c69aa51c54ef",
+    "date": "2025-01-29T19:25:45.000+01:00",
+    "unix": 1738175145
   }
 }

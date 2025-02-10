@@ -1,5 +1,5 @@
 Description: forcibly disable the linter in the dockerfile frontend (BUILDKIT_SYNTAX=khulnasoft/buildkit)
-Author: Md Sulaiman <admwiggin@gmail.com>
+Author: KhulnaSoft Ltd <admwiggin@gmail.com>
 Forwarded: no; upstream included this linter and enabled it by default intentionally
 
 Ideally, this would be disabled in such a way that it was merely disabled-by-default and could be re-enabled at runtime (opt-in instead of opt-out), but the code is byzantine enough that I wasn't able to find a simple/clean way to accomplish that (and being able to do so does not appear to be a goal of upstream's implementation).

@@ -4,7 +4,7 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM alpine:3.20
+FROM alpine:3.21
 
 RUN apk add --no-cache ca-certificates
 
@@ -22,6 +22,7 @@ RUN set -ex; \
 		armhf)   promArch='armv6'   ;; \
 		armv7)   promArch='armv7'   ;; \
 		ppc64le) promArch='ppc64le' ;; \
+		riscv64) promArch='riscv64' ;; \
 		s390x)   promArch='s390x'   ;; \
 		x86)     promArch='386'     ;; \
 		x86_64)  promArch='amd64'   ;; \

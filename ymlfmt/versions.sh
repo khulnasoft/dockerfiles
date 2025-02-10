@@ -9,7 +9,7 @@ source "$dir/../.libs/pypi.sh"
 
 versions_hooks+=( hook_no-prereleases )
 
-export KHULNASOFT_PYTHON_FROM_TEMPLATE='python:%%PYTHON%%-alpine3.20'
+export KHULNASOFT_PYTHON_FROM_TEMPLATE='python:%%PYTHON%%-alpine3.21'
 
 json="$(pypi 'ruamel.yaml')"
 
