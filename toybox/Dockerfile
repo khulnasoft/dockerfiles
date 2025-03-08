@@ -7,7 +7,7 @@
 # ideally, we'd use official static binary releases from http://landley.net/toybox/downloads/binaries/ but they don't include the (pending) "sh" implementation so they're not quite enough for a full system yet
 # https://github.com/landley/toybox/commits/master/toys/pending/sh.c
 
-FROM alpine:3.20 AS build
+FROM alpine:3.21 AS build
 
 RUN set -eux; \
 	apk add --no-cache \
@@ -24,7 +24,7 @@ WORKDIR /toybox
 
 # https://landley.net/toybox/downloads/?C=M;O=D
 # https://github.com/landley/toybox/releases
-ENV TOYBOX_VERSION 0.8.11
+ENV TOYBOX_VERSION 0.8.12
 
 RUN set -eux; \
 	wget -O toybox.tgz "https://landley.net/toybox/downloads/toybox-$TOYBOX_VERSION.tar.gz"; \

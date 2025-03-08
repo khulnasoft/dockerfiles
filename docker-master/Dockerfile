@@ -33,7 +33,7 @@ ENV DOCKER_BUILDTAGS \
 
 WORKDIR /moby
 
-ARG CLI_GITCOMMIT=e554bfef6c6b5b10b1d8d194c109504172da7ac6
+ARG CLI_GITCOMMIT=bf65a46c2cede11f7a63acbd899d41077c51529d
 ENV CLI_GITCOMMIT $CLI_GITCOMMIT
 
 RUN set -eux; \
@@ -54,7 +54,7 @@ RUN set -eux; \
 	docker --version; \
 	ldd /usr/local/bin/docker || :
 
-ARG MOBY_GITCOMMIT=b249c5ebd214e2977d0fdb1e07d82366f5849cf9
+ARG MOBY_GITCOMMIT=7adac77d6b97ebccc632cd60552a80be8903a418
 ENV MOBY_GITCOMMIT $MOBY_GITCOMMIT
 
 RUN set -eux; \
@@ -114,9 +114,9 @@ RUN set -eux; \
 		chroot . "./$bin" --version; \
 	done
 
-FROM golang:1.22.0-bookworm AS buildx
+FROM golang:1.23.0-bookworm AS buildx
 
-ARG BUILDX_GITCOMMIT=d4eca07af8385dca95b4c38535a9bbaa3bfc0fa9
+ARG BUILDX_GITCOMMIT=d557da193596191a27e284294f7eec6bd62727cd
 ENV BUILDX_GITCOMMIT $BUILDX_GITCOMMIT
 
 RUN set -eux; \
@@ -137,7 +137,7 @@ RUN set -eux; \
 
 # TODO compose?
 
-FROM alpine:3.20
+FROM alpine:3.21
 
 RUN set -eux; \
 	apk add --no-cache \

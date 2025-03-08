@@ -4,13 +4,17 @@
     "lts"
   ],
   "weekly": {
-    "sha256": "7abf13214f1cd5520e143c7d2a3cd81c8c3f48de6738233166f8a948173100b5",
-    "version": "2.492",
+    "filename": "binary/jenkins_2.496_all.deb",
+    "sha256": "6b56eb75d45ed7d66daabe2dc047ba36380ded661cca182ce7804a22dd215e01",
+    "url": "https://pkg.jenkins.io/debian/binary/jenkins_2.496_all.deb",
+    "version": "2.496",
     "repo": "https://pkg.jenkins.io/debian"
   },
   "lts": {
-    "sha256": "426d9eaa1171a0a71f0484a78e3de7a007d307fa83e52c4ab77c5e9b06a02ddb",
-    "version": "2.479.2",
+    "filename": "binary/jenkins_2.492.1_all.deb",
+    "sha256": "9a0226bfc0510a125966125c18a1273933961991482489f293af16e7912e2122",
+    "url": "https://pkg.jenkins.io/debian-stable/binary/jenkins_2.492.1_all.deb",
+    "version": "2.492.1",
     "repo": "https://pkg.jenkins.io/debian-stable"
   }
 }

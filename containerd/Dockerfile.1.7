@@ -16,25 +16,25 @@ RUN set -eux; \
 	rm -rf /var/lib/apt/lists/*
 
 # https://github.com/docker/docker/tree/HEAD/hack/dind
-ENV DIND_COMMIT 65cfcc28ab37cb75e1560e4b4738719c07c6618e
-# https://github.com/docker/docker/commit/65cfcc28ab37cb75e1560e4b4738719c07c6618e -- 2023-11-27T14:48:51.000+01:00 (@1701092931)
+ENV DIND_COMMIT c43aa0b6aa7c88343f0951ba9a39c69aa51c54ef
+# https://github.com/docker/docker/commit/c43aa0b6aa7c88343f0951ba9a39c69aa51c54ef -- 2025-01-29T19:25:45.000+01:00 (@1738175145)
 RUN set -eux; \
 	wget -O /usr/local/bin/dind "https://github.com/docker/docker/raw/${DIND_COMMIT}/hack/dind"; \
 	sh -n /usr/local/bin/dind; \
 	chmod +x /usr/local/bin/dind
 
 # https://github.com/opencontainers/runc/releases
-ENV RUNC_VERSION 1.2.2
+ENV RUNC_VERSION 1.2.4
 RUN set -eux; \
 	dpkgArch="$(dpkg --print-architecture)"; \
 	case "$dpkgArch" in \
-		'amd64') url='https://github.com/opencontainers/runc/releases/download/v1.2.2/runc.amd64'; sha256='a34f5ab4fc1df1f456293c3d797a76f2d41cf3cd970bb49fc53ba94bbc8a5cf6' ;; \
-		'i386') url='https://github.com/opencontainers/runc/releases/download/v1.2.2/runc.386'; sha256='7d05edbb10405f3fa77d8e6b3646cab4ca07a67c21110fcdc05d2e33224bf253' ;; \
-		'arm64') url='https://github.com/opencontainers/runc/releases/download/v1.2.2/runc.arm64'; sha256='bfd3e6c58bd6060eaa725520c31cbc8f6386ac7606e65bfa7fe9084100aa1789' ;; \
-		'armhf') url='https://github.com/opencontainers/runc/releases/download/v1.2.2/runc.armhf'; sha256='78b8eb427e4b55431edc1d73772889f0905b7ae9f1273839fe9478edc1a99949' ;; \
-		'ppc64el') url='https://github.com/opencontainers/runc/releases/download/v1.2.2/runc.ppc64le'; sha256='9af46fe0bdc654c72593a937806ca034ffbbf4f62f25c1de7a40b5b0f4374de7' ;; \
-		'riscv64') url='https://github.com/opencontainers/runc/releases/download/v1.2.2/runc.riscv64'; sha256='cc169ba3fe80981759034c5ebcb20534d90c4d3e8e6825950bc2c192f800bd0b' ;; \
-		's390x') url='https://github.com/opencontainers/runc/releases/download/v1.2.2/runc.s390x'; sha256='33fe3bab8d12a43f0499fc018abbac2536e61c0c30bc9e962df363549ae58b34' ;; \
+		'amd64') url='https://github.com/opencontainers/runc/releases/download/v1.2.4/runc.amd64'; sha256='e83565aa78ec8f52a4d2b4eb6c4ca262b74c5f6770c1f43670c3029c20175502' ;; \
+		'i386') url='https://github.com/opencontainers/runc/releases/download/v1.2.4/runc.386'; sha256='41dda3ff784c611bc86acf16f3472f9663160809bf6be854998231e3e038df63' ;; \
+		'arm64') url='https://github.com/opencontainers/runc/releases/download/v1.2.4/runc.arm64'; sha256='285f6c4c3de1d78d9f536a0299ae931219527b2ebd9ad89df5a1072896b7e82a' ;; \
+		'armhf') url='https://github.com/opencontainers/runc/releases/download/v1.2.4/runc.armhf'; sha256='1aba471efcaf76393b308e23ff8013fbd2f60f920a2c7dc84e33b31dccc24ebf' ;; \
+		'ppc64el') url='https://github.com/opencontainers/runc/releases/download/v1.2.4/runc.ppc64le'; sha256='141fa41c1f382483ccf374827f99c7843414fceb95e8ceb710aba8bac984d016' ;; \
+		'riscv64') url='https://github.com/opencontainers/runc/releases/download/v1.2.4/runc.riscv64'; sha256='2b58f0f7d1450cba40e05e4c3ba7251702a785f19bff5bc7ff736004a9ef9424' ;; \
+		's390x') url='https://github.com/opencontainers/runc/releases/download/v1.2.4/runc.s390x'; sha256='cb6f5692687f351325fbf67e9655563c83537918a40dfb5c864894f32f6115c3' ;; \
 		*) echo >&2 "error: unsupported architecture: '$dpkgArch'"; exit 1 ;; \
 	esac; \
 # TODO $url.asc (see https://github.com/opencontainers/runc/releases)
@@ -44,15 +44,15 @@ RUN set -eux; \
 	runc --version
 
 # https://github.com/containerd/containerd/releases
-ENV CONTAINERD_VERSION 1.7.24
+ENV CONTAINERD_VERSION 1.7.25
 RUN set -eux; \
 	dpkgArch="$(dpkg --print-architecture)"; \
 	case "$dpkgArch" in \
-		'amd64') url='https://github.com/containerd/containerd/releases/download/v1.7.24/containerd-1.7.24-linux-amd64.tar.gz'; sha256='1a94f15139f37633f39e24f08a4071f4533b285df3cbee6478972d26147bcaef' ;; \
-		'arm64') url='https://github.com/containerd/containerd/releases/download/v1.7.24/containerd-1.7.24-linux-arm64.tar.gz'; sha256='420406d2b34ebb422ab3755fbeede59bf3bfcfccf5cfa584b558c93769d99064' ;; \
-		'ppc64el') url='https://github.com/containerd/containerd/releases/download/v1.7.24/containerd-1.7.24-linux-ppc64le.tar.gz'; sha256='2ca4d527dac68132a2a6b3971d82ddfd18edc7fa838b7cfcfe6eb11efd017871' ;; \
-		'riscv64') url='https://github.com/containerd/containerd/releases/download/v1.7.24/containerd-1.7.24-linux-riscv64.tar.gz'; sha256='e570544ef0339caedc5daf54360d385d84dbc6d0070577ac561f19d51b5d59de' ;; \
-		's390x') url='https://github.com/containerd/containerd/releases/download/v1.7.24/containerd-1.7.24-linux-s390x.tar.gz'; sha256='353ed879ff2e298d97f9d690b96bf9f1ece58b5adf291da32f900b5352bcc690' ;; \
+		'amd64') url='https://github.com/containerd/containerd/releases/download/v1.7.25/containerd-1.7.25-linux-amd64.tar.gz'; sha256='02990fa281c0a2c4b073c6d2415d264b682bd693aa7d86c5d8eb4b86d684a18c' ;; \
+		'arm64') url='https://github.com/containerd/containerd/releases/download/v1.7.25/containerd-1.7.25-linux-arm64.tar.gz'; sha256='e9201d478e4c931496344b779eb6cb40ce5084ec08c8fff159a02cabb0c6b9bf' ;; \
+		'ppc64el') url='https://github.com/containerd/containerd/releases/download/v1.7.25/containerd-1.7.25-linux-ppc64le.tar.gz'; sha256='0934176e32eace1c23dcb9edff0e78f872bf8f7152b5e6f622e9ccf1ddce8722' ;; \
+		'riscv64') url='https://github.com/containerd/containerd/releases/download/v1.7.25/containerd-1.7.25-linux-riscv64.tar.gz'; sha256='1b07ac5d7256f717d6120cf6ad50bc725e75289352a9595486deeca68c9f1134' ;; \
+		's390x') url='https://github.com/containerd/containerd/releases/download/v1.7.25/containerd-1.7.25-linux-s390x.tar.gz'; sha256='8a1aad7f88a4c1190c17c78de8dc8d4c116de27dc8c158873de2eabdf6e422a5' ;; \
 		*) echo >&2 "error: unsupported architecture: '$dpkgArch'"; exit 1 ;; \
 	esac; \
 	wget -O containerd.tar.gz "$url" --progress=dot:giga; \
