@@ -47,7 +47,8 @@ RUN set -ex; \
 		'prometheus-3.1.0.linux-s390x.tar.gz') sha256='cbdd77975d2f6e7d048a42feffb02bcb93495be86fafa50ebdf96ff1bc723940' ;; \
 		*) echo >&2 "error: unknown file: $filename"; exit 1 ;; \
 	esac; \
-	wget -O /tmp/prom.tar.gz "https://github.com/prometheus/prometheus/releases/download/v${PROMETHEUS_VERSION}/$filename"; \
+ wget -O /tmp/prom.tar.gz "https://github.com/prometheus/prometheus/releases/download/v${PROMETHEUS_VERSION}/$filename"; \
+ echo "$sha256 /tmp/prom.tar.gz" | sha256sum -c -; \
 	echo "$sha256 */tmp/prom.tar.gz" | sha256sum -c -; \
 	\
 	tar \
